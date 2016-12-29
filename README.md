@@ -1,7 +1,6 @@
 # drummer
 Drum simulation.  Call:
 
-    $ chmod +x gui.py
     $ ./gui.py
 
 or alternatively:
