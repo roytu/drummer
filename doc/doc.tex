@@ -1,0 +1,43 @@
+\title{Title}
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{ amssymb }
+\usepackage{braket}
+\usepackage{hyperref}
+
+\begin{document}
+\maketitle
+
+We take $J_m$ to be the Bessel function of order $m$.  $m=0$ is spherical, etc.
+
+Consider a drum with radius $a$, and "tension" parameter $c$.  Solution for a circular membrane are:
+\begin{align*}
+    u_{mn}(r, \theta, t) = R(r) \Theta(\theta) T(t)
+\end{align*}
+with
+\begin{align*}
+    R(r) &= J_m( k_{mn} * r) \\
+    \Theta(\theta) &= \cos (m(\theta - \theta_0)) \\
+    T(t) &= \cos (c k_{mn} (t - t_0))
+\end{align*}
+$k_mn$ is such that $J_m(k_mn a) = 0$.  They are the normalized zeroes of the Bessel functions. \\
+The general solution is a superposition of these:
+\begin{align*}
+    u(r, \theta, t) = \sum_{m = 0}^\infty \sum_{n=1}^\infty c_{mn} u_{mn}(r, \theta, t)
+\end{align*}
+for any coefficients $c_{mn}$.  \\
+When we hit the drum at position $(r_0, \theta_0)$ at time $t_0$, what should the coefficients be?  We need to choose coefficients such that the state of the drum looks like a Dirac impulse at the hit point.  We use the Hankel transform:
+\begin{align*}
+    c_n &= \frac{\int\limits_0^a dr f(r) J_m(k_{mn} r) r}{\frac{a^2}{2} J^2_{m+1}(k_{mn} a)} \\
+        &= \frac{G J_m(\frac{\alpha_{mn}}{a} r_0)}{\frac{a^2}{2} J^2_{m+1}(k_{mn} a)} \\
+\end{align*}
+where we plugged in our impulse:
+\begin{align*}
+    f(r) = G \delta(r - r_0)
+\end{align*}
+for some strength factor $G$.  See bottom of \url{http://www.hit.ac.il/staff/benzionS/Differential.Equations/Orthogonality_of_Bessel_functions.htm}. \\
+
+We take the $\theta_0$ and $t_0$ in our $\Theta$ and $T$ functions to be where we hit the drum.  These functions are maximal at these points.
+
+\end{document}
