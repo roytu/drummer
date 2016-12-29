@@ -1,5 +1,12 @@
 # drummer
-Drum simulation
+Drum simulation.  Call:
+
+    $ chmod +x gui.py
+    $ ./gui.py
+
+or alternatively:
+
+    $ python3 gui.py
 
 Dependencies include:
 * Python 3
