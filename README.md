@@ -2,6 +2,7 @@
 Drum simulation
 
 Dependencies include:
+* Python 3
 * PyQt5
 * Pyaudio (>=0.2.7)
 * Numpy (>=1.10.4)
