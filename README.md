@@ -14,3 +14,5 @@ Dependencies include:
 * Numpy (>=1.10.4)
 * Scipy (>= 0.17.0)
 * Matplotlib (>= 1.5.1)
+
+![drum_demo_1.png](/images/drum_demo_1.png)
