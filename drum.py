@@ -37,8 +37,8 @@ class Drum(object):
 
         self.m_max = m_max
         self.n_max = n_max
-        self.rcount = rcount
-        self.thetacount = thetacount
+        self.rcount = int(rcount)
+        self.thetacount = int(thetacount)
 
         self.t = 0  # Time
 
